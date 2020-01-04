@@ -43,6 +43,9 @@ Lastly, add keys to your tables for indexing. you can use provided alterkeys.sql
 This project is developed for educational purpose only and to test the performance.
 There are less chances of any further development.
 
+## Donations
+IF this work helps you , feel free to share a cup of TEA
+> 1GWHmyKM2TFDy1Tymgn8eskGfxDWVv1roX
 
 # Acknowledgement
 Thanks to <a href="https://bitcoinj.github.io/">bitcoinj</a>
