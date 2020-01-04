@@ -8,6 +8,7 @@ A Demo work to export data from bitcoin to mysql. High performance 2 minutes per
 
 # Required java libraries
 You can download from <a href="https://mvnrepository.com/artifact/org.bitcoinj/bitcoinj-core/0.15.3"> Maven Repository</a>
+Place them in BlockParser\library folder
 *  	bitcoinj-core-0.15.3.jar 
 * 	mysql-connector-java-8.0.16.jar
 * 	bcprov-jdk15on-1.60.jar
@@ -24,17 +25,17 @@ You can download from <a href="https://mvnrepository.com/artifact/org.bitcoinj/b
   Fill database connection details and path to  blk***.dat files in bitcoin core folder. (blocks_path)
   open trid.txt file type 1 and close
   import the sql file
-  num_files value in db.properties will process that many blk***.dat files in bitcoin core folder. Depending on your system and how long you can run continously, enter this value.(500)
+  num_files value in db.properties will process that many blk***.dat files in bitcoin core folder. Depending on your system and how long you can run continously, enter a numeric value.(500 or max 2000 to process all blk files in single run)
 
 
-  Start program by runing loadtoDb.bat  or
+Download and extract the blockparser.jar to BlockParser folder and run loadtoDb.bat or 
 ```
-  java -cp "btcparser.jar;library/*"   com.zanet.btcsql.BTCSqlParser
+  java -cp "blockparser.jar;library/*"   com.zanet.btcsql.BTCSqlParser
 ```
   Every subsequent run will start program from where it last left and continue until all files in bitcoin core folder are processed 
   After first run do not alter the value in trid.txt file.
  
-  Lastly, add keys to your tables for indexing. you can use provided alterkeys.sql file or make changes to tables as needed.
+Lastly, add keys to your tables for indexing. you can use provided alterkeys.sql file or make changes to tables as needed.
 #### Performance
   Currently on a average it takes (max) 2 minutes to process one  blk***.dat file.
 
